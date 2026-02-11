@@ -1,0 +1,18 @@
+package org.kiroff.resource_server.controllers;
+
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/tokens")
+public class TokenController
+{
+    @GetMapping
+    public Jwt status(@AuthenticationPrincipal Jwt jwt)
+    {
+        return jwt;
+    }
+}

@@ -1,0 +1,377 @@
+[1] 1269705
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.kiroff:discovery-service >--------------------
+[INFO] Building Discovery Service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] >>> spring-boot:4.0.2:run (default-cli) > test-compile @ discovery-service >>>
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ discovery-service ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ discovery-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ discovery-service ---
+[INFO] skip non existing resourceDirectory /home/public/sources/personal/maven/discovery-service/src/test/resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ discovery-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO]
+[INFO] <<< spring-boot:4.0.2:run (default-cli) < test-compile @ discovery-service <<<
+[INFO]
+[INFO]
+[INFO] --- spring-boot:4.0.2:run (default-cli) @ discovery-service ---
+[INFO] Attaching agents: []
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v4.0.2)
+2026-02-03T17:44:14.130+02:00  INFO 1269880 --- [           main] o.k.d.DiscoveryServiceApplication        : Starting DiscoveryServiceApplication using Java 25.0.2 with PID 1269880 (/home/public/sources/personal/maven/discovery-service/target/classes started by kiroffbg in /home/public/sources/personal/maven/discovery-service)
+2026-02-03T17:44:14.133+02:00  INFO 1269880 --- [           main] o.k.d.DiscoveryServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-02-03T17:44:14.879+02:00  INFO 1269880 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ea1d61dd-23c2-3fdc-81af-7fac1dff681d
+2026-02-03T17:44:15.095+02:00  INFO 1269880 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8762 (http)
+2026-02-03T17:44:15.107+02:00  INFO 1269880 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-03T17:44:15.107+02:00  INFO 1269880 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-03T17:44:15.146+02:00  INFO 1269880 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 974 ms
+2026-02-03T17:44:15.838+02:00  WARN 1269880 --- [           main] org.glassfish.jersey.internal.Errors     : The following warnings have been detected: WARNING: Unknown HK2 failure detected:
+MultiException stack 1 of 2
+java.lang.NoClassDefFoundError: com/thoughtworks/xstream/XStream
+        at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+        at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:962)
+        at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:144)
+        at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:776)
+        at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:691)
+        at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:620)
+        at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:578)
+        at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+        at com.netflix.discovery.converters.wrappers.CodecWrappers$XStreamXml.<init>(CodecWrappers.java:357)
+        at com.netflix.discovery.converters.wrappers.CodecWrappers.create(CodecWrappers.java:132)
+        at com.netflix.discovery.converters.wrappers.CodecWrappers.getEncoder(CodecWrappers.java:74)
+        at com.netflix.discovery.converters.wrappers.CodecWrappers.getEncoder(CodecWrappers.java:65)
+        at com.netflix.discovery.provider.DiscoveryJerseyProvider.<init>(DiscoveryJerseyProvider.java:77)
+        at com.netflix.discovery.provider.DiscoveryJerseyProvider.<init>(DiscoveryJerseyProvider.java:64)
+        at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+        at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+        at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+        at org.glassfish.hk2.utilities.reflection.ReflectionHelper.makeMe(ReflectionHelper.java:1356)
+        at org.jvnet.hk2.internal.ClazzCreator.createMe(ClazzCreator.java:271)
+        at org.jvnet.hk2.internal.ClazzCreator.create(ClazzCreator.java:395)
+        at org.jvnet.hk2.internal.SystemDescriptor.create(SystemDescriptor.java:479)
+        at org.jvnet.hk2.internal.SingletonContext$1.compute(SingletonContext.java:61)
+        at org.jvnet.hk2.internal.SingletonContext$1.compute(SingletonContext.java:49)
+        at org.glassfish.hk2.utilities.cache.Cache$OriginThreadAwareFuture$1.call(Cache.java:74)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+        at org.glassfish.hk2.utilities.cache.Cache$OriginThreadAwareFuture.run(Cache.java:131)
+        at org.glassfish.hk2.utilities.cache.Cache.compute(Cache.java:176)
+        at org.jvnet.hk2.internal.SingletonContext.findOrCreate(SingletonContext.java:100)
+        at org.jvnet.hk2.internal.Utilities.createService(Utilities.java:2111)
+        at org.jvnet.hk2.internal.ServiceHandleImpl.getService(ServiceHandleImpl.java:98)
+        at org.jvnet.hk2.internal.ServiceHandleImpl.getService(ServiceHandleImpl.java:68)
+        at org.glassfish.jersey.inject.hk2.AbstractHk2InjectionManager.lambda$getAllServiceHolders$0(AbstractHk2InjectionManager.java:137)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214)
+        at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1250)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+        at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+        at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:723)
+        at org.glassfish.jersey.inject.hk2.AbstractHk2InjectionManager.getAllServiceHolders(AbstractHk2InjectionManager.java:141)
+        at org.glassfish.jersey.inject.hk2.ImmediateHk2InjectionManager.getAllServiceHolders(ImmediateHk2InjectionManager.java:30)
+        at org.glassfish.jersey.internal.inject.Providers.getServiceHolders(Providers.java:323)
+        at org.glassfish.jersey.internal.inject.Providers.getCustomProviders(Providers.java:167)
+        at org.glassfish.jersey.message.internal.MessageBodyFactory.initialize(MessageBodyFactory.java:221)
+        at org.glassfish.jersey.message.internal.MessageBodyFactory$MessageBodyWorkersConfigurator.postInit(MessageBodyFactory.java:116)
+        at org.glassfish.jersey.server.ApplicationHandler.lambda$initialize$2(ApplicationHandler.java:372)
+        at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4264)
+        at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:372)
+        at org.glassfish.jersey.server.ApplicationHandler.lambda$initialize$1(ApplicationHandler.java:316)
+        at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+        at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+        at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:232)
+        at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:315)
+        at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:276)
+        at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:339)
+        at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:151)
+        at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:382)
+        at org.apache.catalina.core.ApplicationFilterConfig.initFilter(ApplicationFilterConfig.java:236)
+        at org.apache.catalina.core.ApplicationFilterConfig.<init>(ApplicationFilterConfig.java:99)
+        at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:3853)
+        at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4452)
+        at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+        at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162)
+        at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+        at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81)
+        at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:149)
+        at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714)
+        at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:780)
+        at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+        at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162)
+        at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+        at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81)
+        at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:149)
+        at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714)
+        at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201)
+        at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+        at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410)
+        at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+        at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:864)
+        at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+        at org.apache.catalina.startup.Tomcat.start(Tomcat.java:435)
+        at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:131)
+        at org.springframework.boot.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:110)
+        at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:408)
+        at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:166)
+        at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:190)
+        at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164)
+        at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:614)
+        at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+        at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+        at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+        at org.kiroff.discovery_service.DiscoveryServiceApplication.main(DiscoveryServiceApplication.java:14)
+Caused by: java.lang.ClassNotFoundException: com.thoughtworks.xstream.XStream
+        at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580)
+        at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+        ... 97 more
+MultiException stack 2 of 2
+java.lang.IllegalStateException: Unable to perform operation: create on com.netflix.discovery.provider.DiscoveryJerseyProvider
+        at org.jvnet.hk2.internal.ClazzCreator.create(ClazzCreator.java:428)
+        at org.jvnet.hk2.internal.SystemDescriptor.create(SystemDescriptor.java:479)
+        at org.jvnet.hk2.internal.SingletonContext$1.compute(SingletonContext.java:61)
+        at org.jvnet.hk2.internal.SingletonContext$1.compute(SingletonContext.java:49)
+        at org.glassfish.hk2.utilities.cache.Cache$OriginThreadAwareFuture$1.call(Cache.java:74)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+        at org.glassfish.hk2.utilities.cache.Cache$OriginThreadAwareFuture.run(Cache.java:131)
+        at org.glassfish.hk2.utilities.cache.Cache.compute(Cache.java:176)
+        at org.jvnet.hk2.internal.SingletonContext.findOrCreate(SingletonContext.java:100)
+        at org.jvnet.hk2.internal.Utilities.createService(Utilities.java:2111)
+        at org.jvnet.hk2.internal.ServiceHandleImpl.getService(ServiceHandleImpl.java:98)
+        at org.jvnet.hk2.internal.ServiceHandleImpl.getService(ServiceHandleImpl.java:68)
+        at org.glassfish.jersey.inject.hk2.AbstractHk2InjectionManager.lambda$getAllServiceHolders$0(AbstractHk2InjectionManager.java:137)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214)
+        at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1250)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+        at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+        at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:723)
+        at org.glassfish.jersey.inject.hk2.AbstractHk2InjectionManager.getAllServiceHolders(AbstractHk2InjectionManager.java:141)
+        at org.glassfish.jersey.inject.hk2.ImmediateHk2InjectionManager.getAllServiceHolders(ImmediateHk2InjectionManager.java:30)
+        at org.glassfish.jersey.internal.inject.Providers.getServiceHolders(Providers.java:323)
+        at org.glassfish.jersey.internal.inject.Providers.getCustomProviders(Providers.java:167)
+        at org.glassfish.jersey.message.internal.MessageBodyFactory.initialize(MessageBodyFactory.java:221)
+        at org.glassfish.jersey.message.internal.MessageBodyFactory$MessageBodyWorkersConfigurator.postInit(MessageBodyFactory.java:116)
+        at org.glassfish.jersey.server.ApplicationHandler.lambda$initialize$2(ApplicationHandler.java:372)
+        at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4264)
+        at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:372)
+        at org.glassfish.jersey.server.ApplicationHandler.lambda$initialize$1(ApplicationHandler.java:316)
+        at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+        at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+        at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:232)
+        at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:315)
+        at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:276)
+        at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:339)
+        at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:151)
+        at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:382)
+        at org.apache.catalina.core.ApplicationFilterConfig.initFilter(ApplicationFilterConfig.java:236)
+        at org.apache.catalina.core.ApplicationFilterConfig.<init>(ApplicationFilterConfig.java:99)
+        at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:3853)
+        at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4452)
+        at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+        at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162)
+        at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+        at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81)
+        at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:149)
+        at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714)
+        at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:780)
+        at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+        at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162)
+        at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+        at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81)
+        at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:149)
+        at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714)
+        at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201)
+        at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+        at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410)
+        at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+        at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:864)
+        at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+        at org.apache.catalina.startup.Tomcat.start(Tomcat.java:435)
+        at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:131)
+        at org.springframework.boot.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:110)
+        at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:408)
+        at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:166)
+        at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:190)
+        at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164)
+        at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:614)
+        at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+        at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+        at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+        at org.kiroff.discovery_service.DiscoveryServiceApplication.main(DiscoveryServiceApplication.java:14)
+2026-02-03T17:44:15.838+02:00 ERROR 1269880 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Exception starting filter [jerseyFilterRegistration]
+A MultiException has 2 exceptions.  They are:
+1. java.lang.NoClassDefFoundError: com/thoughtworks/xstream/XStream
+2. java.lang.IllegalStateException: Unable to perform operation: create on com.netflix.discovery.provider.DiscoveryJerseyProvider
+        at org.jvnet.hk2.internal.ClazzCreator.create(ClazzCreator.java:427) ~[hk2-locator-4.0.0-M3.jar:na]
+        at org.jvnet.hk2.internal.SystemDescriptor.create(SystemDescriptor.java:479) ~[hk2-locator-4.0.0-M3.jar:na]
+        at org.jvnet.hk2.internal.SingletonContext$1.compute(SingletonContext.java:61) ~[hk2-locator-4.0.0-M3.jar:na]
+        at org.jvnet.hk2.internal.SingletonContext$1.compute(SingletonContext.java:49) ~[hk2-locator-4.0.0-M3.jar:na]
+        at org.glassfish.hk2.utilities.cache.Cache$OriginThreadAwareFuture$1.call(Cache.java:74) ~[hk2-utils-4.0.0-M3.jar:na]
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+        at org.glassfish.hk2.utilities.cache.Cache$OriginThreadAwareFuture.run(Cache.java:131) ~[hk2-utils-4.0.0-M3.jar:na]
+        at org.glassfish.hk2.utilities.cache.Cache.compute(Cache.java:176) ~[hk2-utils-4.0.0-M3.jar:na]
+        at org.jvnet.hk2.internal.SingletonContext.findOrCreate(SingletonContext.java:100) ~[hk2-locator-4.0.0-M3.jar:na]
+        at org.jvnet.hk2.internal.Utilities.createService(Utilities.java:2111) ~[hk2-locator-4.0.0-M3.jar:na]
+        at org.jvnet.hk2.internal.ServiceHandleImpl.getService(ServiceHandleImpl.java:98) ~[hk2-locator-4.0.0-M3.jar:na]
+        at org.jvnet.hk2.internal.ServiceHandleImpl.getService(ServiceHandleImpl.java:68) ~[hk2-locator-4.0.0-M3.jar:na]
+        at org.glassfish.jersey.inject.hk2.AbstractHk2InjectionManager.lambda$getAllServiceHolders$0(AbstractHk2InjectionManager.java:137) ~[jersey-hk2-4.0.0.jar:na]
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214) ~[na:na]
+        at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1250) ~[na:na]
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570) ~[na:na]
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560) ~[na:na]
+        at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[na:na]
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265) ~[na:na]
+        at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:723) ~[na:na]
+        at org.glassfish.jersey.inject.hk2.AbstractHk2InjectionManager.getAllServiceHolders(AbstractHk2InjectionManager.java:141) ~[jersey-hk2-4.0.0.jar:na]
+        at org.glassfish.jersey.inject.hk2.ImmediateHk2InjectionManager.getAllServiceHolders(ImmediateHk2InjectionManager.java:30) ~[jersey-hk2-4.0.0.jar:na]
+        at org.glassfish.jersey.internal.inject.Providers.getServiceHolders(Providers.java:323) ~[jersey-common-4.0.0.jar:na]
+        at org.glassfish.jersey.internal.inject.Providers.getCustomProviders(Providers.java:167) ~[jersey-common-4.0.0.jar:na]
+        at org.glassfish.jersey.message.internal.MessageBodyFactory.initialize(MessageBodyFactory.java:221) ~[jersey-common-4.0.0.jar:na]
+        at org.glassfish.jersey.message.internal.MessageBodyFactory$MessageBodyWorkersConfigurator.postInit(MessageBodyFactory.java:116) ~[jersey-common-4.0.0.jar:na]
+        at org.glassfish.jersey.server.ApplicationHandler.lambda$initialize$2(ApplicationHandler.java:372) ~[jersey-server-4.0.0.jar:na]
+        at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4264) ~[na:na]
+        at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:372) ~[jersey-server-4.0.0.jar:na]
+        at org.glassfish.jersey.server.ApplicationHandler.lambda$initialize$1(ApplicationHandler.java:316) ~[jersey-server-4.0.0.jar:na]
+        at org.glassfish.jersey.internal.Errors.process(Errors.java:292) ~[jersey-common-4.0.0.jar:na]
+        at org.glassfish.jersey.internal.Errors.process(Errors.java:274) ~[jersey-common-4.0.0.jar:na]
+        at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:232) ~[jersey-common-4.0.0.jar:na]
+        at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:315) ~[jersey-server-4.0.0.jar:na]
+        at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:276) ~[jersey-server-4.0.0.jar:na]
+        at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:339) ~[jersey-container-servlet-4.0.0.jar:na]
+        at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:151) ~[jersey-container-servlet-4.0.0.jar:na]
+        at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:382) ~[jersey-container-servlet-4.0.0.jar:na]
+        at org.apache.catalina.core.ApplicationFilterConfig.initFilter(ApplicationFilterConfig.java:236) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.core.ApplicationFilterConfig.<init>(ApplicationFilterConfig.java:99) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:3853) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4452) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+        at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:149) ~[na:na]
+        at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:780) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+        at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:149) ~[na:na]
+        at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:864) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.apache.catalina.startup.Tomcat.start(Tomcat.java:435) ~[tomcat-embed-core-11.0.15.jar:11.0.15]
+        at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:131) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
+        at org.springframework.boot.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:110) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
+        at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:408) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
+        at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:166) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
+        at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:190) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+        at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+        at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:614) ~[spring-context-7.0.3.jar:7.0.3]
+        at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+        at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+        at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+        at org.kiroff.discovery_service.DiscoveryServiceApplication.main(DiscoveryServiceApplication.java:14) ~[classes/:na]
+Caused by: java.lang.NoClassDefFoundError: com/thoughtworks/xstream/XStream
+        at java.base/java.lang.ClassLoader.defineClass1(Native Method) ~[na:na]
+        at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:962) ~[na:na]
+        at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:144) ~[na:na]
+        at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:776) ~[na:na]
+        at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:691) ~[na:na]
+        at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:620) ~[na:na]
+        at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:578) ~[na:na]
+        at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+        at com.netflix.discovery.converters.wrappers.CodecWrappers$XStreamXml.<init>(CodecWrappers.java:357) ~[eureka-client-2.0.5.jar:2.0.5]
+        at com.netflix.discovery.converters.wrappers.CodecWrappers.create(CodecWrappers.java:132) ~[eureka-client-2.0.5.jar:2.0.5]
+        at com.netflix.discovery.converters.wrappers.CodecWrappers.getEncoder(CodecWrappers.java:74) ~[eureka-client-2.0.5.jar:2.0.5]
+        at com.netflix.discovery.converters.wrappers.CodecWrappers.getEncoder(CodecWrappers.java:65) ~[eureka-client-2.0.5.jar:2.0.5]
+        at com.netflix.discovery.provider.DiscoveryJerseyProvider.<init>(DiscoveryJerseyProvider.java:77) ~[eureka-client-2.0.5.jar:2.0.5]
+        at com.netflix.discovery.provider.DiscoveryJerseyProvider.<init>(DiscoveryJerseyProvider.java:64) ~[eureka-client-2.0.5.jar:2.0.5]
+        at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+        at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+        at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[na:na]
+        at org.glassfish.hk2.utilities.reflection.ReflectionHelper.makeMe(ReflectionHelper.java:1356) ~[hk2-utils-4.0.0-M3.jar:na]
+        at org.jvnet.hk2.internal.ClazzCreator.createMe(ClazzCreator.java:271) ~[hk2-locator-4.0.0-M3.jar:na]
+        at org.jvnet.hk2.internal.ClazzCreator.create(ClazzCreator.java:395) ~[hk2-locator-4.0.0-M3.jar:na]
+        ... 77 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.thoughtworks.xstream.XStream
+        at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580) ~[na:na]
+        at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+        ... 97 common frames omitted
+2026-02-03T17:44:15.842+02:00 ERROR 1269880 --- [           main] o.apache.catalina.core.StandardContext   : One or more Filters failed to start. Full details will be found in the appropriate container log file
+2026-02-03T17:44:15.842+02:00 ERROR 1269880 --- [           main] o.apache.catalina.core.StandardContext   : Context [] startup failed due to previous errors
+2026-02-03T17:44:15.865+02:00  INFO 1269880 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-02-03T17:44:15.867+02:00  WARN 1269880 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-02-03T17:44:15.877+02:00  INFO 1269880 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger :
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-02-03T17:44:15.890+02:00 ERROR 1269880 --- [           main] o.s.boot.SpringApplication               : Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+        at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+        at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:614) ~[spring-context-7.0.3.jar:7.0.3]
+        at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+        at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+        at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+        at org.kiroff.discovery_service.DiscoveryServiceApplication.main(DiscoveryServiceApplication.java:14) ~[classes/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+        at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:150) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
+        at org.springframework.boot.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:110) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
+        at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:408) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
+        at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:166) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
+        at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:190) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+        at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+        ... 8 common frames omitted
+Caused by: java.lang.IllegalStateException: StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[] failed to start
+        at org.springframework.boot.tomcat.TomcatWebServer.rethrowDeferredStartupExceptions(TomcatWebServer.java:206) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
+        at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:134) ~[spring-boot-tomcat-4.0.2.jar:4.0.2]
+        ... 13 common frames omitted
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.903 s
+[INFO] Finished at: 2026-02-03T17:44:15+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:4.0.2:run (default-cli) on project discovery-service: Process terminated with exit code: 1 -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[1]+  Exit 1                     JAVA_HOME=/usr/lib/jvm/java-25-openjdk ./mvnw spring-boot:run -Dspring-boot.run.arguments="--server.port=8762"
+bash: kill: (1269705) - No such process

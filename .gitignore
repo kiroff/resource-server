@@ -1,0 +1,16 @@
+#netbeans
+nb-configuration.xml
+#IntelliJ
+*.iml
+.idea/
+bin/
+#Eclipse
+.project
+.settings
+.classpath
+.metadata
+target/
+build/
+*.versionsBackup
+*/**/wro/
+.vscode/launch.json

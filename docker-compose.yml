@@ -1,0 +1,9 @@
+services:
+  resource-server:
+    build: .
+    ports:
+      - "8765:8765"
+    environment:
+      KEYCLOAK_ISSUER_URI: http://keycloak:8080/auth/realms/kiroff
+    depends_on:
+      - keycloak
