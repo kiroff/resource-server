@@ -3,6 +3,8 @@ package org.kiroff.resource_server.controllers;
 import org.kiroff.resource_server.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -19,10 +21,13 @@ public class UserController
 {
     private static final Logger LOG = LoggerFactory.getLogger(UserController.class);
 
+    @Autowired
+    Environment env;
+
     @RequestMapping("/status")
     public String status()
     {
-        return "OK at " + java.time.LocalDateTime.now();
+        return "Running on port " + env.getProperty("local.server.port") + " at " + java.time.LocalDateTime.now();
     }
 
     @PreAuthorize("hasRole('developer') or hasAnyAuthority('ROLE_developer') or #id == #jwt.subject")
