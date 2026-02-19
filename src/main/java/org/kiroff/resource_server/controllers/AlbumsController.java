@@ -13,17 +13,25 @@ import java.util.stream.IntStream;
 @RequestMapping("/albums")
 public class AlbumsController
 {
+
+    public static final String URL = "http://localhost:8020/albums/";
+
     @GetMapping()
     List<Album> getAlbums()
     {
         return IntStream.range(1, 1000)
-                .mapToObj(i -> new Album(i, "Album " + i, "http://localhost:8082/albums/" + i))
+                .mapToObj(AlbumsController::getAlbum)
                 .toList();
     }
 
     @GetMapping("/{id}")
-    Album getAlbums(@PathVariable("id") int i)
+    Album getAlbums(@PathVariable("id") String i)
     {
-        return new Album(i, "Album " + i, "http://localhost:8082/albums/" + i);
+        return getAlbum(Integer.parseInt(i));
+    }
+
+    private static Album getAlbum(int i)
+    {
+        return new Album(i, "Album " + i, URL + i);
     }
 }
